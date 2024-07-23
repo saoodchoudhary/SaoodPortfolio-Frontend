@@ -28,10 +28,10 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-      <div className="min-h-screen flex flex-col items-center  p-8">
+      <div className="py-[100px] flex flex-col items-center  p-8">
      
     <div className="relative flex flex-col items-center p-8  rounded-lg">
-      <h2 className="text-3xl font-bold mb-8 text-green-800">Process</h2>
+      <h2 className="text-3xl font-bold mb-8 text-green-700">Process</h2>
       <div className="relative w-full">
         <div className="absolute left-1/2 transform -translate-x-1/2 w-[2px] h-full bg-gray-400"></div>
         {steps.map((step, index) => (

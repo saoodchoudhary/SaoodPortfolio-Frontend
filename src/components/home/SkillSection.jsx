@@ -2,7 +2,10 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-import { FaReact, FaNodeJs, FaDatabase, FaTools, FaServer, FaCloud } from 'react-icons/fa'
+import { FaReact, FaNodeJs, FaDatabase, FaTools, FaServer, FaCloud, FaAws  } from 'react-icons/fa'
+import { FaSquareGithub } from "react-icons/fa6";
+import { BiLogoHeroku } from "react-icons/bi";
+import { SiNetlify , SiVercel, SiMongodb  } from "react-icons/si";
 
 const Skills = [
   {
@@ -54,11 +57,7 @@ const Skills = [
       },
       {
         name: 'MongoDB',
-        icon: <FaDatabase />
-      },
-      {
-        name: 'Firebase',
-        icon: <FaDatabase />
+        icon: <SiMongodb  />
       },
       {
         name: 'REST API',
@@ -77,7 +76,7 @@ const Skills = [
       },
       {
         name: 'GitHub',
-        icon: <FaTools />
+        icon: <FaSquareGithub />
       },
       {
         name: 'VS Code',
@@ -89,11 +88,11 @@ const Skills = [
       },
       {
         name: 'Heroku',
-        icon: <FaCloud />
+        icon: <BiLogoHeroku />
       },
       {
         name: 'Netlify',
-        icon: <FaCloud />
+        icon: <SiNetlify />
       }
     ]
   },
@@ -104,23 +103,23 @@ const Skills = [
     skills:[
       {
         name: 'Heroku',
-        icon: <FaCloud />
+        icon: <BiLogoHeroku />
       },
       {
         name: 'Netlify',
-        icon: <FaCloud />
+        icon: <SiNetlify />
       },
       {
         name: 'Vercel',
-        icon: <FaCloud />
+        icon: <SiVercel  />
       },
       {
         name: 'GitHub Pages',
-        icon: <FaCloud />
+        icon: <FaSquareGithub />
       },
       {
         name: 'AWS',
-        icon: <FaCloud />
+        icon: <FaAws  />
       }
     ]
   },
@@ -180,7 +179,7 @@ const SkillSection = () => {
           <h2 className='text-2xl font-semibold text-green-900 text-center  pb-10'>Skills</h2>
           <div className='flex flex-col gap-5'>
             {Skills.map(skill => (             
-                <button key={skill.id}  onClick={()=>setHashName(skill.id)} className={`text-lg  border  rounded px-8 py-2 max-w-[290px]  font-medium ${(skill.id === hashName) ? " bg-green-700 text-white " : " bg-white border-green-700 text-green-700"}`}>{skill.name}</button>                
+                <button key={skill.id}  onClick={()=>setHashName(skill.id)} className={`text-lg   rounded px-8 py-2 max-w-[290px]  font-medium ${(skill.id === hashName) ? " bg-green-700 text-white " : " bg-green-50  text-green-700"}`}>{skill.name}</button>                
              
             ))}
 
@@ -192,7 +191,7 @@ const SkillSection = () => {
         <div className='flex flex-wrap justify-start gap-10'>
           {activeSkills.skills.map(subSkill => (
             <div key={subSkill.name} className=' inline-flex w-[120px] h-[110px] rounded-sm shadow-sm shadow-green-200 px-1 flex-col items-center justify-center gap-2 bg-green-50 border border-gray-100'>
-             <div className='text-green-700'>  {subSkill.icon} </div>
+             <div className='text-green-700 text-[26px]'>  {subSkill.icon} </div>
               <div className='text-center text-sm'>{subSkill.name}</div>
             </div>
           ))}
