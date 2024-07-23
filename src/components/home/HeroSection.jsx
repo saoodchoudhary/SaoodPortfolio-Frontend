@@ -54,8 +54,8 @@ export default function Hero() {
       {/* Profile Image and Dashed Circle */}
       <div className="relative md:w-1/2 flex items-center justify-center mt-8 md:mt-0">
         <motion.div
-          animate={{ rotate: [0, 360, 0, -360, 0] }}
-          transition={{ duration: 36, repeat: Infinity, ease: "linear" }}
+          animate={{ rotate: [0, 60, 0, -60, 0] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
           className="absolute w-72 h-72 md:w-[490px] md:h-[490px] rounded-full flex justify-center items-center"
         >
           <svg className="w-full h-full">
