@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div className=" bg-gradient-to-br from-green-900 to-gray-950">     
 
-     <div className="relative mx-auto max-w-[1200px] flex flex-col-reverse gap-10 md:flex-row items-center justify-center py-[160px] sm:py-[250px] overflow-hidden">
+     <div className="relative mx-auto max-w-[1100px] px-[50px] flex flex-col-reverse gap-10 md:flex-row items-center justify-center py-[160px] sm:py-[250px] overflow-hidden">
      <motion.div
         className="absolute top-[20%] left-[40%] w-24 h-24 blur-[2px] rounded-full opacity-20 z-0"
         initial={{ backgroundColor: "#355E3B" }}
