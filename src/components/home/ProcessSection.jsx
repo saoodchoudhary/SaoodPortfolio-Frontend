@@ -46,14 +46,14 @@ export default function ProcessSection() {
             <div className="flex items-center justify-center w-1/2">
               <div className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow-md">
                 {index % 2 === 1 && (
-                  <div className="text-blue-500">{step.icon}</div>
+                  <div className="text-green-500">{step.icon}</div>
                 )}
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800">{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
                 </div>
                 {index % 2 === 0 && (
-                  <div className="text-blue-500">{step.icon}</div>
+                  <div className="text-green-500">{step.icon}</div>
                 )}
               </div>
             </div>
