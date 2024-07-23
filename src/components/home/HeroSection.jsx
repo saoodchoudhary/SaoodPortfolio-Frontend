@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div className=" bg-gradient-to-br from-green-900 to-gray-950">     
 
-     <div className="relative mx-auto max-w-[1100px] px-[50px] flex flex-col-reverse gap-10 md:flex-row items-center justify-center py-[160px] sm:py-[250px] overflow-hidden">
+     <div className="relative mx-auto max-w-[1100px] px-[10px] sm:px-[50px] flex flex-col-reverse gap-10 sm:flex-row items-center justify-center py-[160px] sm:py-[250px] overflow-x-hidden ">
      <motion.div
         className="absolute top-[20%] left-[40%] w-24 h-24 blur-[2px] rounded-full opacity-20 z-0"
         initial={{ backgroundColor: "#355E3B" }}
@@ -23,7 +23,7 @@ export default function Hero() {
       ></motion.div>
 
       {/* Text Content */}
-      <div className="relative z-10 text-center md:text-left md:w-1/2 space-y-10">
+      <div className="relative z-10 text-center sm:text-left sm:w-1/2 space-y-10">
         <h1 className="text-4xl font-bold text-white">
             <span className='text-5xl inline-block text-blue-200'>Hey...</span>
                 <span className='block mt-4'>I'm Saood Ahmad</span>
@@ -52,7 +52,7 @@ export default function Hero() {
       </div>
 
       {/* Profile Image and Dashed Circle */}
-      <div className="relative md:w-1/2 flex items-center justify-center mt-8 md:mt-0">
+      <div className="relative md:w-1/2 flex items-center justify-center mt-8 sm:mt-0">
         <motion.div
           animate={{ rotate: [0, 60, 0, -60, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
