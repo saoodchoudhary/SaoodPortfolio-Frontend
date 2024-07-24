@@ -92,7 +92,7 @@ export default function Hero() {
       >
         <div className="relative max-w-[180px] flex justify-center items-center translate-x-[10%] sm:translate-x-[0px] translate-y-[-100%] sm:translate-y-[0px] bg-green-100 rounded-md px-3 py-2 shadow-sm shadow-gray-400 ">
           <div className=' font-medium text-green-800 text-center'>
-            Thank You for visiting my website
+            Welcome to my Website
           </div>
           <div className="absolute block sm:hidden bottom-0 left-0 translate-y-[30%] w-0 h-0 border-l-[40px] border-l-transparent border-t-[20px] border-t-green-100 rounded-sm rotate-[10deg] z-0"></div>
           <div className="absolute hidden sm:block bottom-0 translate-x-[60%] right-0 w-0 h-0 border-l-transparent border-r-[30px]  border-r-transparent border-b-[20px] border-b-green-100 rounded-sm rotate-[20deg] z-0 "></div>
