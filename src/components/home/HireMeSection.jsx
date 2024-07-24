@@ -1,19 +1,23 @@
 "use client"
 // components/HireMe.js
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { SaveContactMe } from '../../../store/contactMe';
+import Image from 'next/image';
 
 export default function HireMe() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
-    budget: '',
-    contactMethod: '',
-    deadline: '',
-    file: null,
   });
 
+  const dispatch = useDispatch();
+  const contactMe = useSelector((state) => state.contactMe);
+  const loading = contactMe.loading;
+
+  console.log("cont", contactMe)
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     setFormData({ ...formData, [name]: files ? files[0] : value });
@@ -21,138 +25,94 @@ export default function HireMe() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    dispatch(SaveContactMe(formData));
     // Add form submission logic here
   };
 
   return (
-    <div className='bg-green-50 p-8'>
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="max-w-[1100px] mx-auto mt-10"
-    >
-      <h2 className="text-3xl font-bold text-center mb-8">Hire Me</h2>
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="flex flex-col sm:flex-row sm:space-x-4"> 
-          <div className='flex flex-col w-full gap-5 sm:gap-0 sm:w-1/2'>
+    <div className='p-8'>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-[1100px] mx-auto"
+      >
+        <h2 className="text-3xl font-semibold text-green-700 text-center mb-8">Contact Me</h2>
+        <form onSubmit={handleSubmit} className="space-y-6">
 
-        <div>
-          <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            required
-          />
-        </div>
-        
-        <div>
-          <label htmlFor="budget" className="block text-gray-700 font-semibold mb-2">
-            Budget
-          </label>
-          <input
-            type="text"
-            name="budget"
-            id="budget"
-            value={formData.budget}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-        </div>
-        
-        <div>
-          <label htmlFor="deadline" className="block text-gray-700 font-semibold mb-2">
-            Project Deadline
-          </label>
-          <input
-            type="date"
-            name="deadline"
-            id="deadline"
-            value={formData.deadline}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-        </div>
-        </div>
-        
-        <div className='flex flex-col w-full mt-5 sm:mt-0  gap-5 sm:gap-0  sm:w-1/2'>
-       
-        <div className='sm:flex-1'>
-          <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
-            Message
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full h-[80%] px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            rows="4"
-            required
-          />
-        </div>
-        {/* <div>
-          <label htmlFor="contactMethod" className="block text-gray-700 font-semibold mb-2">
-            Preferred Contact Method
-          </label>
-          <select
-            name="contactMethod"
-            id="contactMethod"
-            value={formData.contactMethod}
-            onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-          >
-            <option value="">Select</option>
-            <option value="email">Email</option>
-            <option value="phone">Phone</option>
-          </select>
-        </div> */}
-        <div>
-          <label htmlFor="file" className="block text-gray-700 font-semibold mb-2">
-            Attach File
-          </label>
-          <input
-            type="file"
-            name="file"
-            id="file"
-            onChange={handleChange}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-        </div>
-        </div>
-        </div>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          type="submit"
-          className="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-800 transition-colors duration-300"
-        >
-          Send Message
-        </motion.button>
-      
-      </form>
-    </motion.div>
+          <div className='flex flex-col sm:flex-row justify-center items-center gap-5'>
+            <div>
+              <div className='relative hidden sm:block  w-[340px] h-[350px] lg:w-[500px] lg:h-[500px]'>
+                <Image src={"/images/contact.jpg"} fill alt="contact" />
+              </div>
+              <div className='text-center text-[12px]'>Image by <a target='_blank' href="https://www.freepik.com/free-vector/customer-support-flat-illustration_12983847.htm#query=contact%20us&position=1&from_view=keyword&track=ais_user&uuid=ef951839-2e3d-4ad2-9469-793c22f8d581">Freepik</a></div>
+            </div>
+
+            <div className="flex flex-col flex-1 gap-4">
+              <div>
+                <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border rounded-[4px] focus:outline-none focus:ring-1 focus:ring-green-600"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
+                  Email *
+                </label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border rounded-[4px] focus:outline-none focus:ring-1 focus:ring-green-600"
+                  required
+                />
+              </div>
+
+
+              <div>
+                <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
+                  Message *
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full h-[80%] px-4 py-2 border rounded-[4px] focus:outline-none focus:ring-1 focus:ring-green-600"
+                  rows="4"
+                  required
+                />
+              </div>
+
+
+
+           { loading ? 
+            <div className="flex justify-center items-center">
+              <div className="w-6 h-6 border-2 border-t-[4px] border-green-700 rounded-full animate-spin"></div>
+            </div>
+           :  <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="submit"
+                className="w-full bg-green-600 text-white py-2 rounded-[4px] font-semibold hover:bg-green-800 transition-colors duration-300"
+              >
+                Send Message
+              </motion.button>
+              }  
+            </div>
+          </div>
+        </form>
+      </motion.div>
     </div>
   );
 }
