@@ -35,8 +35,8 @@ export default function HireMe() {
     >
       <h2 className="text-3xl font-bold text-center mb-8">Hire Me</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="flex space-x-4"> 
-          <div className='flex flex-col w-1/2'>
+        <div className="flex flex-col sm:flex-row sm:space-x-4"> 
+          <div className='flex flex-col w-full gap-5 sm:gap-0 sm:w-1/2'>
 
         <div>
           <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
@@ -96,9 +96,9 @@ export default function HireMe() {
         </div>
         </div>
         
-        <div className='flex flex-col w-1/2'>
+        <div className='flex flex-col w-full mt-5 sm:mt-0  gap-5 sm:gap-0  sm:w-1/2'>
        
-        <div className='flex-1'>
+        <div className='sm:flex-1'>
           <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
             Message
           </label>

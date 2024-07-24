@@ -37,14 +37,14 @@ export default function ProcessSection() {
         {steps.map((step, index) => (
           <motion.div
             key={step.id}
-            className={`flex relative items-center w-full mb-8 ${index % 2 === 0 ? 'justify-start -ml-8' : 'justify-end ml-8'}`}
+            className={`flex relative mt-6 items-center w-full mb-8 ${index % 2 === 0 ? 'justify-start -ml-8' : 'justify-end ml-8'}`}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.3 }}
           >
             <div className={`absolute ${(index % 2 === 0) ? "right-[50%] translate-x-[100%]" : " left-[50%]  translate-x-[-100%]"} w-8 h-[2px] bg-gray-400 rounded-full`}></div>
-            <div className="flex items-center justify-center w-1/2">
-              <div className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow-md">
+            <div className="flex items-center justify-center sm:w-1/2">
+              <div className={`flex ${(index % 2 !== 0) ? " flex-col " : "  flex-col-reverse "} sm:flex-row items-center space-x-4 bg-white p-4 rounded-lg shadow-md`}>
                 {index % 2 === 1 && (
                   <div className="text-green-500">{step.icon}</div>
                 )}

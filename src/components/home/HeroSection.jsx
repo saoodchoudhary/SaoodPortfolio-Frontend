@@ -47,8 +47,7 @@ export default function Hero() {
             >
             Hire Me
             </a>
-        </div>            
-
+        </div>
       </div>
 
       {/* Profile Image and Dashed Circle */}
