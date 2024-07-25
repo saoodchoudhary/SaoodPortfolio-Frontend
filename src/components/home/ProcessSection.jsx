@@ -42,7 +42,7 @@ export default function ProcessSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.3 }}
           >
-            <div className={`absolute ${(index % 2 === 0) ? "right-[50%] translate-x-[100%]" : " left-[50%]  translate-x-[-100%]"} w-8 h-[2px] bg-gray-400 rounded-full`}></div>
+            <div className={`absolute ${(index % 2 === 0) ? "right-[50%] translate-x-[100%]" : " left-[50%]  translate-x-[-100%]"} w-8 h-[2px] hidden sm:block bg-gray-400 rounded-full`}></div>
             <div className="flex items-center justify-center sm:w-1/2">
               <div className={`flex ${(index % 2 !== 0) ? " flex-col " : "  flex-col-reverse "} sm:flex-row items-center space-x-4 bg-white p-4 rounded-lg shadow-md`}>
                 {index % 2 === 1 && (
