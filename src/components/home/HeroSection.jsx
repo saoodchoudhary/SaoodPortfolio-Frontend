@@ -26,10 +26,10 @@ export default function Hero() {
       <div className="relative z-10 text-center sm:text-left sm:w-1/2 space-y-10">
         <h1 className="text-4xl font-bold text-white">
             <span className='text-5xl inline-block text-blue-200'>Hey...</span>
-                <span className='block mt-4'>I'm Saood Ahmad</span>
+                <span className='block mt-4'>I&apos;m Saood Ahmad</span>
         </h1>
         <p className="text-xl text-gray-200">
-          I'm a Full Stack Web Developer specializing in MERN stack and Next.js. I build robust and scalable web applications.
+          I&apos;m a Full Stack Web Developer specializing in MERN stack and Next.js. I build robust and scalable web applications.
         </p>
 
         {/* CTA Button and Hire me Button*/}
