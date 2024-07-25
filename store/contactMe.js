@@ -1,7 +1,6 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
 
  export const SaveContactMe = createAsyncThunk( "saveContactMe", async (formData, thunkAPI) => {
-    
 
     try {
         const response = await fetch(process.env.NEXT_PUBLIC_API_URL+"/contact-save", {
@@ -22,7 +21,6 @@ import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
     }
 }
 );
-
 
 
 const contactMeSlice = createSlice({

@@ -41,8 +41,8 @@ export default function HireMe() {
         <form onSubmit={handleSubmit} className="space-y-6">
 
           <div className='flex flex-col sm:flex-row justify-center items-center gap-5'>
-            <div>
-              <div className='relative hidden sm:block  w-[340px] h-[350px] lg:w-[500px] lg:h-[500px]'>
+            <div className='hidden sm:block'>
+              <div className='relative  w-[340px] h-[350px] lg:w-[500px] lg:h-[500px]'>
                 <Image src={"/images/contact.jpg"} fill alt="contact" />
               </div>
               <div className='text-center text-[12px]'>Image by <a target='_blank' href="https://www.freepik.com/free-vector/customer-support-flat-illustration_12983847.htm#query=contact%20us&position=1&from_view=keyword&track=ais_user&uuid=ef951839-2e3d-4ad2-9469-793c22f8d581">Freepik</a></div>
