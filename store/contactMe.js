@@ -42,6 +42,11 @@ const contactMeSlice = createSlice({
         contactMeFail: (state, action) => {
             state.loading = false;
             state.error = action.payload;
+        },
+        removeContactMe: (state) => {
+            state.contactMe = null;
+            state.loading = false;
+            state.error = null;
         }
     },
     extraReducers:(builder)=>{
@@ -62,5 +67,5 @@ const contactMeSlice = createSlice({
 });
 
 
-export const { contactMeLoading, contactMeSuccess, contactMeFail } = contactMeSlice.actions;
+export const { contactMeLoading, contactMeSuccess, contactMeFail , removeContactMe } = contactMeSlice.actions;
 export default contactMeSlice.reducer;

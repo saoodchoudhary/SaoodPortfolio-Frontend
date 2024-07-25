@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { SaveContactMe } from '../../../store/contactMe';
+import { removeContactMe, SaveContactMe } from '../../../store/contactMe';
 import Image from 'next/image';
 
 export default function HireMe() {
@@ -23,10 +23,20 @@ export default function HireMe() {
     setFormData({ ...formData, [name]: files ? files[0] : value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(SaveContactMe(formData));
+   await dispatch(SaveContactMe(formData));
     // Add form submission logic here
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
+    // Remove the success message after 8 seconds
+    setTimeout(() => {
+      dispatch(removeContactMe());
+    }, 8000);
+    
   };
 
   return (
@@ -94,6 +104,8 @@ export default function HireMe() {
                 />
               </div>
 
+{contactMe.error && <div className="text-red-500 text-sm">{contactMe.error}</div>}
+{contactMe.contactMe && <div className="text-green-500 text-sm">Message Sent Successfully</div>}
 
 
            { loading ? 
