@@ -12,9 +12,8 @@ body{
     display: none;
 }
 
-.hover-Effect:hover .effect-image {
-    /* filter: blur(4px); */
-    /* transform: scale(0.98); */
-    transition: 0.6s;
+.hover-Effect:hover  {
+    scale: 1.02;
+    transition: 0.3s;
     cursor: pointer;
 }

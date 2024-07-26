@@ -1,0 +1,88 @@
+ export const projectList = [
+    {
+        id:"docs-in-hindi",
+        name: "Docs in Hindi",
+        category: "Web App",
+        subCategory: "Documentation",
+        image: "/images/web-project.png",
+        description: "This is a Simple Programming Documention Website in Hindi.",
+        skill: ["React.js", "Next.js", "Node.js", "Express", "MongoDB"],
+        for: "Personal",
+        active: true,
+        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
+        screen: ["all"],
+    },
+
+    {
+        id:"streaks-notes",
+        name: "Streaks Notes",
+        category: "Web App",
+        subCategory: "Dyanmic App",
+        image: "/images/life-notes.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
+        skill: ["React.js",],
+        for: "Personal",
+        active: true,
+        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
+        screen: ["only for mobile"],
+    },
+
+    {
+        id:"portfolio",
+        name: "Project 3",
+        category: "Web Development",
+        subCategory: "Landing Page",
+        image: "/images/web-project.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
+        skill: ["Next.js", "React.js"],
+        for: "Personal",
+        active: true,
+        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
+        screen: ["only desktop"],
+    },
+
+    {
+        id:"e-commerce",
+        name: "Project 4",
+        category: "Web Development",
+        subCategory: "E-commerce",
+        image: "/images/web-project.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
+        skill: ["React", "Node", "Express", "MongoDB"],
+        for: "Personal",
+        active: true,
+        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
+        screen: ["only mobile"],
+    },
+
+    {
+        id:"documentation",
+
+        name: "Project 5",
+        category: "Web Development",
+        subCategory: "Documentation",
+        image: "/images/web-project.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
+        skill: ["React", "Node", "Express", "MongoDB"],
+        for: "Personal",
+        active: true,
+        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
+        screen: ["all"],
+    },
+
+    {
+        id:"landing-page",
+
+        name: "Project 6",
+        category: "Web Development",
+        subCategory: "Landing Page",
+        image: "/images/web-project.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
+        skill: ["React", "Node", "Express", "MongoDB"],
+        for: "Personal",
+        active: true,
+        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
+        screen: ["only desktop"],
+        url: "/project/6"
+    },
+]
