@@ -5,31 +5,31 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { motion } from 'framer-motion';
 const projectList = [
     {
-        name: "Project 1",
+        name: "Docs in Hindi",
         category: "Web App",
-        subCategory: "E-commerce",
+        subCategory: "Documentation",
         image: "/images/web-project.png",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
+        description: "This is a Simple Programming Documention Website in Hindi.",
         skill: ["React.js", "Next.js", "Node.js", "Express", "MongoDB"],
         for: "Personal",
         active: true,
         screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
-        screen: ["only mobile"],
+        screen: ["all"],
         url: "/project/1"
     },
 
     {
 
-        name: "Project 2",
-        category: "Web Development",
-        subCategory: "Documentation",
-        image: "/images/web-project.png",
+        name: "Streaks Notes",
+        category: "Web App",
+        subCategory: "Dyanmic App",
+        image: "/images/life-notes.png",
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
         skill: ["React.js",],
         for: "Personal",
         active: true,
         screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
-        screen: ["all"],
+        screen: ["only for mobile"],
         url: "/project/2"
     },
 
@@ -107,6 +107,7 @@ const ProjectCard = () => {
     };
 
     useEffect(() => {
+        console.log("hsow more", showMore)
         window.scrollTo(0, 0);
     },[])
 
@@ -124,7 +125,7 @@ const ProjectCard = () => {
                             <span className="bg-green-50 min-w-fit text-green-800 px-3 py-1 rounded-full text-[11px]">{item.subCategory}</span>
                         </div>
                         <div className="self-center">
-                            <Image src={item.image} alt={item.name} width={300} height={100} className="rounded-md border effect-image object-cover" />
+                            <Image src={item.image} alt={item.name} width={300} height={100} className="rounded-md border h-[200px] effect-image object-cover" />
                         </div>
                         <h2 className="text-md font-semibold text-gray-800">{item.name}</h2>
                         <p className="text-sm text-gray-600">{item.description.substring(0, 50)}...</p>
