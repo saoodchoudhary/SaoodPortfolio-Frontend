@@ -11,3 +11,10 @@ body{
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
+.hover-Effect:hover .effect-image {
+    /* filter: blur(4px); */
+    /* transform: scale(0.98); */
+    transition: 0.6s;
+    cursor: pointer;
+}

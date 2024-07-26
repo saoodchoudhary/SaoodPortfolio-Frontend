@@ -1,6 +1,7 @@
 "use client"
 // components/Hero.js
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { MdOutlineWorkOutline } from "react-icons/md";
 
 export default function Hero() {
@@ -34,13 +35,13 @@ export default function Hero() {
 
         {/* CTA Button and Hire me Button*/}
         <div className="flex justify-center md:justify-start space-x-4">
-            <a
-            href="#projects"
+            <Link 
+            href="/project"
             className="bg-white text-green-600 px-6 py-2 flex items-center justify-center rounded-full font-semibold hover:text-green-800  transition-colors duration-500"
             >
                 <MdOutlineWorkOutline className="w-6 h-6 self-center mr-2" />
             View Projects
-            </a>
+            </Link>
             <a
             href="#contact"
             className="bg-green-600 text-white px-6 py-2 rounded-full font-medium hover:bg-green-800 transition-colors duration-500"
