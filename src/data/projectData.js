@@ -9,80 +9,136 @@
         skill: ["React.js", "Next.js", "Node.js", "Express", "MongoDB"],
         for: "Personal",
         active: true,
-        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
-        screen: ["all"],
+        webLink: "https://docs-in-hindi.vercel.app/",
+        screenShot: [
+            {
+            image:"/images/web-project.png",
+            caption: "Home Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "Documentation Page"
+            },
+            {
+            image:"/images/life-notes.png",
+            caption: "Search Page"
+            },
+            {
+            image:"/images/contact.jpg",
+            caption: "login Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "Documentation Page"
+            },
+        ],
+        screen: ["mobile", "desktop", "tablet" , "all"],
     },
-
     {
-        id:"streaks-notes",
-        name: "Streaks Notes",
+        id:"life-notes",
+        name: "Life Notes",
         category: "Web App",
-        subCategory: "Dyanmic App",
+        subCategory: "Notes",
         image: "/images/life-notes.png",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
-        skill: ["React.js",],
+        description: "This is a Simple Note Taking Web App.",
+        skill: ["React.js", "Next.js", "Node.js", "Express", "MongoDB"],
         for: "Personal",
         active: true,
-        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
-        screen: ["only for mobile"],
+        webLink: "https://life-notes.vercel.app/",
+        screenShot: [
+            {
+            image:"/images/life-notes.png",
+            caption: "Home Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "Note Page"
+            },
+            {
+            image:"/images/life-notes.png",
+            caption: "Search Page"
+            },
+            {
+            image:"/images/contact.jpg",
+            caption: "login Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "Note Page"
+            },
+        ],
+        screen: ["mobile", "desktop", "tablet" , "all"],
     },
-
     {
-        id:"portfolio",
-        name: "Project 3",
-        category: "Web Development",
-        subCategory: "Landing Page",
-        image: "/images/web-project.png",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
-        skill: ["Next.js", "React.js"],
+        id:"contact-keeper",
+        name: "Contact Keeper",
+        category: "Web App",
+        subCategory: "Contact",
+        image: "/images/contact.jpg",
+        description: "This is a Simple Contact Keeping Web App.",
+        skill: ["React.js", "Next.js", "Node.js", "Express", "MongoDB"],
         for: "Personal",
         active: true,
-        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
-        screen: ["only desktop"],
+        webLink: "https://contact-keeper.vercel.app/",
+        screenShot: [
+            {
+            image:"/images/contact.jpg",
+            caption: "Home Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "Contact Page"
+            },
+            {
+            image:"/images/life-notes.png",
+            caption: "Search Page"
+            },
+            {
+            image:"/images/contact.jpg",
+            caption: "login Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "Contact Page"
+            },
+        ],
+        screen: ["mobile", "desktop", "tablet" , "all"],
     },
-
     {
-        id:"e-commerce",
-        name: "Project 4",
-        category: "Web Development",
-        subCategory: "E-commerce",
-        image: "/images/web-project.png",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
-        skill: ["React", "Node", "Express", "MongoDB"],
+        id:"saood",
+        name: "Saood",
+        category: "Web App",
+        subCategory: "Portfolio",
+        image: "/images/saood-min.jpg",
+        description: "This is a Simple Portfolio Website.",
+        skill: ["React.js", "Next.js", "Node.js", "Express", "MongoDB"],
         for: "Personal",
         active: true,
-        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
-        screen: ["only mobile"],
-    },
+        webLink: "https://saood.vercel.app/",
+        screenShot: [
+            {
+            image:"/images/saood-min.jpg",
+            caption: "Home Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "About Page"
+            },
+            {
+            image:"/images/life-notes.png",
+            caption: "Project Page"
+            },
+            {
+            image:"/images/contact.jpg",
+            caption: "Contact Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "About Page"
+            },
+        ],
+        screen: ["mobile", "desktop", "tablet" , "all"],
+        
+    }
 
-    {
-        id:"documentation",
-
-        name: "Project 5",
-        category: "Web Development",
-        subCategory: "Documentation",
-        image: "/images/web-project.png",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
-        skill: ["React", "Node", "Express", "MongoDB"],
-        for: "Personal",
-        active: true,
-        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
-        screen: ["all"],
-    },
-
-    {
-        id:"landing-page",
-
-        name: "Project 6",
-        category: "Web Development",
-        subCategory: "Landing Page",
-        image: "/images/web-project.png",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos autem, dicta, eveniet vel ut facilis est tempora doloremque.",
-        skill: ["React", "Node", "Express", "MongoDB"],
-        for: "Personal",
-        active: true,
-        screenShot: ["/images/web-project.png", "/images/web-project.png", "/images/web-project.png"],
-        screen: ["only desktop"],
-        url: "/project/6"
-    },
 ]

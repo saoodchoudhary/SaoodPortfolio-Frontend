@@ -2,11 +2,10 @@
 import Image from 'next/image'
 import React, { useEffect,  useState } from 'react'
 import { motion } from 'framer-motion';
-import  {projectList}  from '@/data/projectData';
 import Link from 'next/link';
 
 
-const ProjectCard = () => {
+const ProjectCard = ({projectList}) => {
     const [showMore, setShowMore] = useState(Array(projectList.length).fill(false));  
 
     const toggleShowMore = (index) => {
@@ -29,7 +28,7 @@ const ProjectCard = () => {
                     animate={{ opacity: 1 , y: 0 }}
                     transition={{ delay: 0.1 * index , duration: 0.5 }}
                     key={index} className="border max-w-[300px] hover-Effect hover:shadow-lg hover:shadow-green-100 transition-shadow cursor-pointer  rounded-lg p-2">
-                    <Link  href={`/project/${item.id}`} className="flex flex-col gap-2">
+                    <Link  href={`/project/details/${item.id}`} className="flex flex-col gap-2">
                         <div className="flex flex-row gap-2">
                             <span className="bg-yellow-50 min-w-fit text-yellow-700 px-3 py-1 rounded-full text-[11px]">{item.category}</span>
                             <span className="bg-green-50 min-w-fit text-green-800 px-3 py-1 rounded-full text-[11px]">{item.subCategory}</span>
