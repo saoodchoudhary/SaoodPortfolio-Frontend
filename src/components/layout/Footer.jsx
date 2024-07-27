@@ -1,5 +1,6 @@
 "use client"
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Footer() {
@@ -9,58 +10,37 @@ export default function Footer() {
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
+          <Link href="/"
             className="text-2xl font-semibold mb-4 md:mb-0"
           >
             Saood Ahmad
-          </motion.div>
+          </Link>
           <div className="flex flex-col space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
+                <Link 
                   href="#about"
                   className="hover:text-white transition-colors duration-300"
                 >
                   About Me
-                </motion.a>
+                </Link>
               </li>
               <li>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  href="#projects"
+                <Link 
+                href="/project"
                   className="hover:text-white transition-colors duration-300"
                 >
                   Projects
-                </motion.a>
-              </li>
-              <li>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  href="#services"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  Services
-                </motion.a>
-              </li>
-              <li>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  href="#contact"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  Contact
-                </motion.a>
+                </Link>
               </li>
             </ul>
           </div>
           <div className="flex flex-col space-y-4">
             <h3 className="text-lg font-semibold">Follow Me</h3>
             <ul className="flex space-x-4">
-              <li>
-                <motion.a
+                {/*  <li>
+             <motion.a
                   whileHover={{ scale: 1.2 }}
                   href="https://facebook.com"
                   target="_blank"
@@ -80,11 +60,11 @@ export default function Footer() {
                 >
                   <FaTwitter size={24} />
                 </motion.a>
-              </li>
+              </li> */}
               <li>
                 <motion.a
                   whileHover={{ scale: 1.2 }}
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/saood-choudhary-0a9677218/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors duration-300"
@@ -95,7 +75,7 @@ export default function Footer() {
               <li>
                 <motion.a
                   whileHover={{ scale: 1.2 }}
-                  href="https://github.com"
+                  href="https://github.com/saoodchoudhary"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors duration-300"

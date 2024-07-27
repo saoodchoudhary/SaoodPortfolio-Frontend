@@ -150,8 +150,39 @@ const Skills = [
 
 ]
 const SkillSection = () => {
+  const scrollRef = React.useRef(null);
   const [activeSkills, setActiveSkills] = useState(Skills[0]);
   const [hashName, setHashName] = useState(Skills[0].id);
+  // change skill
+  const [indexSkill, setIndexSkill] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndexSkill((prevIndex) => {
+        if (prevIndex === Skills.length - 1) {
+          return 0;
+        } else {
+          return prevIndex + 1;
+        }
+      });
+    }, 5000);
+
+    // scroll to active button
+    if (scrollRef.current) {
+      
+      scrollRef.current.scrollTo ( {
+        left:   scrollRef.current.scrollWidth / Skills.length * indexSkill,
+        behavior: 'smooth'
+      });
+    }
+
+    // set hashName
+    setHashName(Skills[indexSkill].id);
+
+    return () => {
+      clearInterval(interval);
+    }
+  }, [indexSkill, hashName]);
 
 
   useEffect(() => {
@@ -186,9 +217,9 @@ const SkillSection = () => {
           {/* for mobile */}
           <div className='block sm:hidden pt-[20px] px-[20px]'>
           <h2 className='text-2xl font-semibold pb-3 text-green-900'>Skills</h2>
-          <div className='flex no-scrollbar items-center gap-5 overflow-y-auto'>
-            {Skills.map(skill => (             
-                <button key={skill.id}  onClick={()=>setHashName(skill.id)} className={`text-lg w-full rounded px-8 py-2 min-w-fit  font-medium ${(skill.id === hashName) ? " bg-green-700 text-white " : " bg-green-50  text-green-700"}`}>{skill.name}</button>           
+          <div ref={scrollRef} className='flex no-scrollbar items-center gap-5 overflow-y-auto'>
+            {Skills.map((skill, ind) => (             
+                <button  key={skill.id}  onClick={()=> {setIndexSkill(ind); setHashName(skill.id)}} className={`text-lg w-full rounded px-8 py-2 min-w-fit  font-medium ${(skill.id === hashName) ? " bg-green-700 text-white " : " bg-green-50  text-green-700"}`}>{skill.name}</button>           
              
             ))}
 
