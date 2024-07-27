@@ -15,31 +15,31 @@ const Skills = [
     skills: [
       {
         name: 'React.js',
-        icon: <FaReact />
+        icon: 'react-js.svg'
       },
       {
         name: 'Next.js',
-        icon: <FaReact />
+        icon: 'next-js.svg'
       },
       {
         name: 'Redux',
-        icon: <FaReact />
+        icon: 'redux.svg'
       },
       {
         name: 'Context API',
-        icon: <FaReact />
+        icon: 'react-js.svg'
       },
       {
         name: 'Tailwind CSS',
-        icon: <FaReact />
+        icon: 'tailwind-css.svg'
       },
       {
         name: 'Bootstrap',
-        icon: <FaReact />
+        icon: 'bootstrap.svg'
       },
       {
         name: 'Material UI',
-        icon: <FaReact />
+        icon: 'material-ui.svg'
       },
     ]
   },
@@ -50,19 +50,19 @@ const Skills = [
     skills: [
       {
         name: 'Node.js',
-        icon: <FaNodeJs />
+        icon: 'node-js.svg'
       },
       {
         name: 'Express.js',
-        icon: <FaNodeJs />
+        icon: 'express-js.svg'
       },
       {
         name: 'MongoDB',
-        icon: <SiMongodb  />
+        icon: 'mongodb.svg'
       },
       {
         name: 'REST API',
-        icon: <FaServer />
+        icon: 'rest-api.svg'
       },
     ]
   },
@@ -73,27 +73,27 @@ const Skills = [
     skills: [
       {
         name: 'Git',
-        icon: <FaTools />
+        icon: 'git.svg'
       },
       {
         name: 'GitHub',
-        icon: <FaSquareGithub />
+        icon: 'github.svg'
       },
       {
         name: 'VS Code',
-        icon: <FaTools />
+        icon: 'vs-code.svg'
       },
       {
         name: 'Postman',
-        icon: <FaTools />
+        icon: 'postman.svg'
       },
       {
         name: 'Heroku',
-        icon: <BiLogoHeroku />
+        icon: 'heroku.svg'
       },
       {
         name: 'Netlify',
-        icon: <SiNetlify />
+        icon: 'netlify.svg'
       }
     ]
   },
@@ -104,23 +104,23 @@ const Skills = [
     skills:[
       {
         name: 'Heroku',
-        icon: <BiLogoHeroku />
+        icon: 'heroku.svg'
       },
       {
         name: 'Netlify',
-        icon: <SiNetlify />
+        icon: 'netlify.svg'
       },
       {
         name: 'Vercel',
-        icon: <SiVercel  />
+        icon: 'vercel.svg'
       },
       {
         name: 'GitHub Pages',
-        icon: <FaSquareGithub />
+        icon: 'github.svg'
       },
       {
         name: 'AWS',
-        icon: <FaAws  />
+        icon: 'aws.svg'
       }
     ]
   },
@@ -131,23 +131,23 @@ const Skills = [
     skills:[
       {
         name: 'Responsive Design',
-        icon: <FaReact />
+        icon: 'responsive-design.svg'
       },
       {
         name: 'Cross Browser Testing',
-        icon: <FaReact />
+        icon: 'test.svg'
       },
       {
         name: 'SEO',
-        icon: <FaReact />
+        icon: 'seo.svg'
       },
       {
         name: 'Web Performance',
-        icon: <FaReact />
+        icon: 'speed.svg'
       },
       {
         name: 'Accessibility',
-        icon: <FaReact />
+        icon: 'accessibility.svg'
       }
     ]
 
@@ -220,7 +220,7 @@ const SkillSection = () => {
         className='flex flex-wrap justify-center sm:justify-start gap-10'>
           {activeSkills.skills.map(subSkill => (
             <div key={subSkill.name} className=' inline-flex w-[120px] h-[110px] rounded-sm shadow-sm shadow-green-200 px-1 flex-col items-center justify-center gap-2 bg-green-50 border border-gray-100'>
-             <div className='text-green-700 text-[26px]'>  {subSkill.icon} </div>
+             <img src={`/icons/${subSkill.icon}`} alt={subSkill.name} className='text-green-700 w-[26px] h-[26px]' /> 
               <div className='text-center text-sm'>{subSkill.name}</div>
             </div>
           ))}
