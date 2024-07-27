@@ -1,12 +1,7 @@
 "use client"
-import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-import { FaReact, FaNodeJs, FaDatabase, FaTools, FaServer, FaCloud, FaAws  } from 'react-icons/fa'
-import { FaSquareGithub } from "react-icons/fa6";
 import { motion } from 'framer-motion'
-import { BiLogoHeroku } from "react-icons/bi";
-import { SiNetlify , SiVercel, SiMongodb  } from "react-icons/si";
+import Image from 'next/image'
 
 const Skills = [
   {
@@ -220,7 +215,7 @@ const SkillSection = () => {
         className='flex flex-wrap justify-center sm:justify-start gap-10'>
           {activeSkills.skills.map(subSkill => (
             <div key={subSkill.name} className=' inline-flex w-[120px] h-[110px] rounded-sm shadow-sm shadow-green-200 px-1 flex-col items-center justify-center gap-2 bg-green-50 border border-gray-100'>
-             <img src={`/icons/${subSkill.icon}`} alt={subSkill.name} className='text-green-700 w-[26px] h-[26px]' /> 
+             <Image src={`/icons/${subSkill.icon}`} width={26} height={26} alt={subSkill.name} className='text-green-700 w-[26px] h-[26px]' /> 
               <div className='text-center text-sm'>{subSkill.name}</div>
             </div>
           ))}
