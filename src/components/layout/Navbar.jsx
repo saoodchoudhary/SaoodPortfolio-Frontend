@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import Sidebar from './Sidebar'
+import Link from 'next/link';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -22,20 +23,20 @@ const Navbar = () => {
 
             {/* for large display */}
             <div className="max-w-[1100px] px-[50px] mx-auto hidden sm:flex justify-between items-center w-full text-white">
-                <div className="font-semibold text-xl tracking-tight">RBM TECH</div>
+                <Link href={"/"} className="font-semibold text-xl tracking-tight">RBM TECH</Link>
                     <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
 
                         <li className="mr-3">
-                            <a className="inline-block py-2 px-4 text-white no-underline" href="#">Home</a>
+                            <Link className="inline-block py-2 px-4 text-white no-underline" href="/">Home</Link>
                         </li>
                         <li className="mr-3">
-                            <a className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">About</a>
+                            <Link className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="/project">Projects</Link>
                         </li>
                         <li className="mr-3">
-                            <a className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Services</a>
+                            <Link className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Services</Link>
                         </li>
                         <li className="mr-3">
-                            <a className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Contact</a>
+                            <Link className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Contact</Link>
                         </li>
                     </ul>
                     </div>

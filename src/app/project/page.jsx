@@ -1,13 +1,18 @@
-import ProjectCard from '@/components/project/ProjectCard'
-import React from 'react'
-import { projectList } from '@/data/projectData'
+"use client"
+import ProjectCard from '@/components/project/ProjectCard';
+import ProjectFilter from '@/components/project/ProjectFilter';
+import React, { useState } from 'react';
+import { projectList } from '@/data/projectData';
 
-const page = () => {
+const ProjectsPage = () => {
+  const [filteredProjects, setFilteredProjects] = useState(projectList);
+
   return (
-    <div className='p-4 py-28 xl:px-20'>
-      <ProjectCard projectList={projectList}/>
+    <div className="p-4 py-28 xl:px-20">
+      <ProjectFilter projectList={projectList} setFilteredProjects={setFilteredProjects} />
+      <ProjectCard projectList={filteredProjects} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default ProjectsPage;

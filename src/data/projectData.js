@@ -6,7 +6,7 @@
         subCategory: "Documentation",
         image: "/images/web-project.png",
         description: "This is a Simple Programming Documention Website in Hindi.",
-        skill: ["React.js", "Next.js", "Node.js", "Express", "MongoDB"],
+        skill: [ "Express", "MongoDB"],
         for: "Personal",
         active: true,
         webLink: "https://docs-in-hindi.vercel.app/",
@@ -32,7 +32,7 @@
             caption: "Documentation Page"
             },
         ],
-        screen: ["mobile", "desktop", "tablet" , "all"],
+        screen: ["mobile"],
     },
     {
         id:"life-notes",
@@ -41,7 +41,7 @@
         subCategory: "Notes",
         image: "/images/life-notes.png",
         description: "This is a Simple Note Taking Web App.",
-        skill: ["React.js", "Next.js", "Node.js", "Express", "MongoDB"],
+        skill: ["Node.js", "Express", "MongoDB"],
         for: "Personal",
         active: true,
         webLink: "https://life-notes.vercel.app/",
@@ -67,7 +67,7 @@
             caption: "Note Page"
             },
         ],
-        screen: ["mobile", "desktop", "tablet" , "all"],
+        screen: ["desktop"],
     },
     {
         id:"contact-keeper",
@@ -76,7 +76,7 @@
         subCategory: "Contact",
         image: "/images/contact.jpg",
         description: "This is a Simple Contact Keeping Web App.",
-        skill: ["React.js", "Next.js", "Node.js", "Express", "MongoDB"],
+        skill: ["Express", "MongoDB"],
         for: "Personal",
         active: true,
         webLink: "https://contact-keeper.vercel.app/",
@@ -102,7 +102,7 @@
             caption: "Contact Page"
             },
         ],
-        screen: ["mobile", "desktop", "tablet" , "all"],
+        screen: ["mobile", ],
     },
     {
         id:"saood",
@@ -111,7 +111,7 @@
         subCategory: "Portfolio",
         image: "/images/saood-min.jpg",
         description: "This is a Simple Portfolio Website.",
-        skill: ["React.js", "Next.js", "Node.js", "Express", "MongoDB"],
+        skill: ["React.js", "Next.js"],
         for: "Personal",
         active: true,
         webLink: "https://saood.vercel.app/",
