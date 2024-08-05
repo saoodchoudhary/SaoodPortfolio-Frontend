@@ -66,6 +66,42 @@
             image:"/images/saood-min.jpg",
             caption: "Note Page"
             },
+            {
+            image:"/images/life-notes.png",
+            caption: "Search Page"
+            },
+            {
+            image:"/images/contact.jpg",
+            caption: "login Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "Note Page"
+            },
+            {
+            image:"/images/life-notes.png",
+            caption: "Search Page"
+            },
+            {
+            image:"/images/contact.jpg",
+            caption: "login Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "Note Page"
+            },
+            {
+            image:"/images/life-notes.png",
+            caption: "Search Page"
+            },
+            {
+            image:"/images/contact.jpg",
+            caption: "login Page"
+            },
+            {
+            image:"/images/saood-min.jpg",
+            caption: "Note Page"
+            },
         ],
         screen: ["desktop"],
     },

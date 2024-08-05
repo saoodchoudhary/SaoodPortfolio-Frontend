@@ -206,8 +206,8 @@ const SkillSection = () => {
         <div className='hidden sm:block py-[20px] sm:py-[50px] px-[20px]'>
           <h2 className='text-2xl font-semibold text-green-900 text-center  pb-10'>Skills</h2>
           <div className='flex items-center flex-col gap-5'>
-            {Skills.map(skill => (             
-                <button key={skill.id}  onClick={()=>setHashName(skill.id)} className={`text-lg w-full rounded px-8 py-2 max-w-[290px]  font-medium ${(skill.id === hashName) ? " bg-green-700 text-white " : " bg-green-50  text-green-700"}`}>{skill.name}</button>                
+            {Skills.map((skill , ind) => (             
+                <button key={skill.id}  onClick={()=>{setIndexSkill(ind); setHashName(skill.id)}} className={`text-lg w-full rounded px-8 py-2 max-w-[290px]  font-medium ${(skill.id === hashName) ? " bg-green-700 text-white " : " bg-green-50  text-green-700"}`}>{skill.name}</button>                
              
             ))}
 

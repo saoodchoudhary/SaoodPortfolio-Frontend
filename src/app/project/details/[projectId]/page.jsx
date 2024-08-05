@@ -20,16 +20,16 @@ const ProjectPage = ({ params }) => {
   };
 
   return (
-    <div className="py-32 px-4 md:px-10 lg:px-20">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">{project.name}</h1>
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="relative w-full md:w-2/3 lg:w-1/2">
+    <div className="py-32 px-4 md:px-10 max-w-[1200px] mx-auto lg:px-20">
+      <h1 className="text-lg md:text-2xl font-bold text-gray-800 mb-4">{project.name}</h1>
+      <div className="flex flex-col items-center gap-8">
+        <div className="relative w-full border rounded-lg">
           <motion.div
             key={currentImageIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="relative w-full h-72 md:h-96"
+            className="relative w-full h-72 md:h-[600px]"
           >
             <Image
               src={project.screenShot[currentImageIndex].image}
@@ -48,18 +48,18 @@ const ProjectPage = ({ params }) => {
           </motion.div>
           <button
             onClick={handlePrevImage}
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition"
+            className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition"
           >
             <FaArrowLeft />
           </button>
           <button
             onClick={handleNextImage}
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition"
+            className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition"
           >
             <FaArrowRight />
           </button>
         </div>
-        <div className="w-full md:w-1/3 lg:w-1/2">
+        <div className="w-full ">
           <h2 className="text-2xl font-semibold text-gray-700 mb-4">Screenshots</h2>
           <div className="flex no-scrollbar sm:flex-wrap overflow-x-auto sm:overflow-hidden gap-4">
           {project.screenShot.map((screenshot, index) => (
@@ -79,10 +79,11 @@ const ProjectPage = ({ params }) => {
         </div>
       </div>
       
-      <p className="text-gray-600 mt-8 text-center max-w-3xl mx-auto">{project.description}</p>
-      <div className="mt-12 text-center">
+      <h3 className="text-lg mt-12 font-semibold text-gray-700">Description</h3>
+      <p className="text-gray-600 mt-3">{project.description}</p>
+      <div className="mt-12">
         <h3 className="text-lg font-semibold text-gray-700">Skills Used</h3>
-        <div className="flex justify-center flex-wrap gap-2 mt-2">
+        <div className="flex  flex-wrap gap-2 mt-2">
           {project.skill.map((skill, index) => (
             <span
               key={index}
@@ -93,9 +94,9 @@ const ProjectPage = ({ params }) => {
           ))}
         </div>
       </div>
-      <div className="mt-8 text-center">
+      <div className="mt-8">
         <h3 className="text-lg font-semibold text-gray-700">Supported Screens</h3>
-        <div className="flex justify-center flex-wrap gap-2 mt-2">
+        <div className="flex flex-wrap gap-2 mt-2">
           {project.screen.map((screenType, index) => (
             <span
               key={index}
