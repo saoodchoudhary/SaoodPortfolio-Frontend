@@ -2,27 +2,35 @@
 import React from 'react'
 
 // components/Process.js
-import { FaLaptopCode, FaPaintBrush, FaCogs } from 'react-icons/fa';
+import { FaRegClipboard, FaLaptopCode,  FaRocket, FaPaintBrush, FaWrench } from 'react-icons/fa';
+
 import { motion, inView  } from 'framer-motion';
 
 const steps = [
   {
-    id: 1,
-    icon: <FaLaptopCode size={32} />,
-    title: 'Step 1: Planning',
-    description: 'Identify requirements, create wireframes, and set project milestones.',
+    title: "1. Planning",
+    description: "Creating a roadmap, including wireframes, mood boards, and timelines.",
+    icon: <FaRegClipboard size={30} />,
   },
   {
-    id: 2,
-    icon: <FaPaintBrush size={32} />,
-    title: 'Step 2: Design',
-    description: 'Create visual designs, choose color schemes, and design UI/UX elements.',
+    title: "2. Design",
+    description: "Developing design concepts and prototypes for client feedback.",
+    icon: <FaPaintBrush size={30} />,
   },
   {
-    id: 3,
-    icon: <FaCogs size={32} />,
-    title: 'Step 3: Development',
-    description: 'Write code, develop features, and integrate with backend systems.',
+    title: "3. Development",
+    description: "Coding and optimizing the project for performance and functionality.",
+    icon: <FaLaptopCode size={30} />,
+  },
+  {
+    title: "4. Launch",
+    description: "Delivering the final product and ensuring a smooth launch.",
+    icon: <FaRocket size={30} />,
+  },
+  {
+    title: "5. Maintenance",
+    description: "Providing ongoing maintenance and updates for long-term success.",
+    icon: <FaWrench size={30} />,
   },
 ];
 
@@ -36,7 +44,7 @@ export default function ProcessSection() {
         <div className="absolute left-1/2 transform -translate-x-1/2 w-[2px] h-full bg-gray-400"></div>
         {steps.map((step, index) => (
           <motion.div
-            key={step.id}
+            key={index}
             className={`flex relative mt-6 items-center w-full mb-8 ${index % 2 === 0 ? 'justify-start -ml-8' : 'justify-end ml-8'}`}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

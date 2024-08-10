@@ -7,6 +7,7 @@ import SkillSection from "@/components/home/SkillSection";
 import Navbar from "@/components/layout/Navbar";
 import { Provider } from "react-redux";
 import store from "../../store/reducer";
+import ClientFeedback from "@/components/home/ClientFeedback";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
     <SkillSection/>
     <ProjectSection/>
     <ProcessSection/>
+    <ClientFeedback/>
     <HireMeSection/>
    </div>
     </Provider>
