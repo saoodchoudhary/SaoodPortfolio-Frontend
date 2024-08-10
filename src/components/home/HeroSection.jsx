@@ -10,17 +10,17 @@ export default function Hero() {
 
      <div className="relative mx-auto max-w-[1100px] px-[10px] sm:px-[50px] flex flex-col-reverse gap-10 sm:flex-row items-center justify-center py-[160px] sm:py-[250px] overflow-x-hidden ">
      <motion.div
-        className="absolute top-[20%] left-[40%] w-24 h-24 blur-[2px] rounded-full opacity-20 z-0"
-        initial={{ backgroundColor: "#355E3B" }}
-        animate={{ backgroundColor: ["#355E3B", "#4F7942", "#009E60", "#40826D"] }}
-        transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute top-[20%] left-[40%] w-24 bg-[#355E3B] h-24 blur-[2px] rounded-full opacity-20 z-0"
+        initial={{ scale : 1 }}
+        animate={{ scale : 1.3 }}
+        transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
       ></motion.div>
     
      <motion.div
-        className="absolute bottom-[20%] right-[0%] w-10 h-10 blur-[2px] rounded-full opacity-10  z-0"
-        initial={{ backgroundColor: "#355E3B" }}
-        animate={{ backgroundColor: ["#355E3B", "#4F7942", "#009E60", "#40826D"] }}
-        transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute bottom-[20%] right-[10%] w-10 h-10 blur-[2px] bg-[#355E3B] rounded-full opacity-10  z-0"
+        initial={{ scale : 1 }}
+        animate={{ scale : 1.2 }}
+        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
       ></motion.div>
 
       {/* Text Content */}

@@ -25,7 +25,7 @@ export default function HireMe() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   await dispatch(SaveContactMe(formData));
+    await dispatch(SaveContactMe(formData));
     // Add form submission logic here
     setFormData({
       name: '',
@@ -36,7 +36,7 @@ export default function HireMe() {
     setTimeout(() => {
       dispatch(removeContactMe());
     }, 8000);
-    
+
   };
 
   return (
@@ -51,13 +51,21 @@ export default function HireMe() {
         <form onSubmit={handleSubmit} className="space-y-6">
 
           <div className='flex flex-col sm:flex-row justify-center items-center gap-5'>
+
             <div className='hidden sm:block'>
               <div className='relative  w-[340px] h-[350px] lg:w-[500px] lg:h-[500px]'>
                 <Image src={"/images/contact.jpg"} fill alt="contact" />
               </div>
-              <div className='text-center text-[12px]'>Image by <a target='_blank' href="https://www.freepik.com/free-vector/customer-support-flat-illustration_12983847.htm#query=contact%20us&position=1&from_view=keyword&track=ais_user&uuid=ef951839-2e3d-4ad2-9469-793c22f8d581">Freepik</a></div>
-            </div>
+              {/* <div className='text-center text-[12px]'>Image by <a target='_blank' href="https://www.freepik.com/free-vector/customer-support-flat-illustration_12983847.htm#query=contact%20us&position=1&from_view=keyword&track=ais_user&uuid=ef951839-2e3d-4ad2-9469-793c22f8d581">Freepik</a></div>*/}
+              <div>
+                {/* <div className='bg-black text-white rounded-'>
 
+                  <h5>Email</h5>
+                  <div><a href='MailTo:saoodchoudhary9@gmail.com'>saoodchoudhary9@gmail.com</a> </div>
+                </div> */}
+              </div>
+
+            </div>
             <div className="flex flex-col flex-1 gap-4">
               <div>
                 <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
@@ -104,23 +112,23 @@ export default function HireMe() {
                 />
               </div>
 
-{contactMe.error && <div className="text-red-500 text-sm">{contactMe.error}</div>}
-{contactMe.contactMe && <div className="text-green-500 text-sm">Message Sent Successfully</div>}
+              {contactMe.error && <div className="text-red-500 text-sm">{contactMe.error}</div>}
+              {contactMe.contactMe && <div className="text-green-500 text-sm">Message Sent Successfully</div>}
 
 
-           { loading ? 
-            <div className="flex justify-center items-center">
-              <div className="w-6 h-6 border-2 border-t-[4px] border-green-700 rounded-full animate-spin"></div>
-            </div>
-           :  <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                type="submit"
-                className="w-full bg-green-600 text-white py-2 rounded-[4px] font-semibold hover:bg-green-800 transition-colors duration-300"
-              >
-                Send Message
-              </motion.button>
-              }  
+              {loading ?
+                <div className="flex justify-center items-center">
+                  <div className="w-6 h-6 border-2 border-t-[4px] border-green-700 rounded-full animate-spin"></div>
+                </div>
+                : <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  type="submit"
+                  className="w-full bg-green-600 text-white py-2 rounded-[4px] font-semibold hover:bg-green-800 transition-colors duration-300"
+                >
+                  Send Message
+                </motion.button>
+              }
             </div>
           </div>
         </form>
