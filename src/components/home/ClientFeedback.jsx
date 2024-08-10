@@ -3,14 +3,14 @@ import React from 'react'
 import { FaStar } from "react-icons/fa";
 const clientFeedback = [
     {
-        name: "John doe",
+        name: "Mohammad Alzayed",
         rating: 5,
         where: "on Upwork",
         feedback: "Saood is a brilliant website developer! He turned my vision into a reality with a stunning website. Exceptional creativity, attention to detail, and a seamless process. Highly recommend Saood for anyone seeking a top-notch website. Thank you for your amazing talent.",
         image: "/images/person3.jpg"
     },
     {
-        name: "John doe",
+        name: "Usman",
         rating: 5,
         where: "on Upwork",
         feedback: "Saud is a very professional and expert developer in tailwind CSS and Next JS. want to work with him in the future.",
