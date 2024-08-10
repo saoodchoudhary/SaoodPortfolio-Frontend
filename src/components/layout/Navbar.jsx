@@ -33,7 +33,7 @@ const Navbar = () => {
                             <Link className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="/project">Projects</Link>
                         </li>
                         <li className="mr-3">
-                            <Link className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Services</Link>
+                            <Link className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="https://www.docsinhindi.com">Tutorial Web</Link>
                         </li>
                         <li className="mr-3">
                             <Link className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Contact</Link>

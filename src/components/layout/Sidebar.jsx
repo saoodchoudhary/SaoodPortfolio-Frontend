@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
 import {motion} from 'framer-motion'
-import { MdOutlineWorkOutline } from "react-icons/md";
+import { MdOutlineWorkOutline ,MdOutlineContactMail} from "react-icons/md";
+
 import { FaHome } from "react-icons/fa";
 import { usePathname } from 'next/navigation';
-
+import { AiOutlineLink } from "react-icons/ai";
 const List = [
   {
     url : '/',
@@ -17,14 +18,14 @@ const List = [
     icon : <MdOutlineWorkOutline />
   },
   {
-    url : '/services',
-    name: 'Services',
-    icon : <FaHome />
+    url : 'https://www.docsinhindi.com',
+    name: 'Tutorial Web',
+    icon : <AiOutlineLink />
   },
   {
     url : '/contact',
-    name: 'Contact',
-    icon : <FaHome />
+    name: 'Contact Us',
+    icon : <MdOutlineContactMail />
   },
 ]
 
