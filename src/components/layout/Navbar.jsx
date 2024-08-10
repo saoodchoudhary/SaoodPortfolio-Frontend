@@ -17,7 +17,7 @@ const Navbar = () => {
                     <div className={`bg-white w-5 h-[2px] ${isOpen ? " -rotate-45 -translate-y-[2px] " : " rotate-0"} transition-all`}></div>
                 </div>
                
-                <div className="font-semibold text-lg text-gray-200 tracking-tight">RBM TECH</div>
+                <div className="font-semibold text-lg text-gray-200 tracking-tight">Saood Ahmad</div>
             </div>
 
 
@@ -36,7 +36,7 @@ const Navbar = () => {
                             <Link className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="https://www.docsinhindi.com">Tutorial Web</Link>
                         </li>
                         <li className="mr-3">
-                            <Link className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">Contact</Link>
+                            <Link className="inline-block text-white no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="/contact">Contact Us</Link>
                         </li>
                     </ul>
                     </div>
