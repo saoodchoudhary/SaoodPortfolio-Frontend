@@ -31,19 +31,19 @@ const ClientFeedback = () => {
 
                     {clientFeedback.map((val, idx) => {
                         return (
-                            <div className='bg-green-600 relative mt-14 text-white shadow border rounded-xl px-5 flex flex-col w-[330px]'>
+                            <div key={idx} className='bg-green-600 relative mt-14 text-white shadow border rounded-xl px-5 flex flex-col w-[330px]'>
                                     <Image src={"/images/profile.png"} className='absolute -top-14 border-4 border-white rounded-full left-1/2 -translate-x-[50%]' width={90} height={90} alt='profile'/>
                                 <div className='flex mt-8 flex-col justify-center items-center'>
                                     <div className='text-lg font-medium mt-2'>{val.name}</div>
                                     <div className='text-[11px] text-center'><a className='text-white hover:underline italic' href='https://www.upwork.com/freelancers/~01165a0bcf8202bb22' target='_blank'>{val.where}</a></div>
                                     <div className='flex justify-center gap-1 mt-2'>
-                                    {[1,2,3,4,5].map((val)=>{
+                                    {[1,2,3,4,5].map((val,i)=>{
                                     console.log("hel")
-                                    return <FaStar className='text-yellow-400 text-sm'/>
+                                    return <FaStar key={i} className='text-yellow-400 text-sm'/>
                                 })}
                                 </div>
                                 </div>  
-                                <div className='mt-2 mb-3 text-sm text-center'>"{val.feedback}"</div>
+                                <div className='mt-2 mb-3 text-sm text-center'>&quot;{val.feedback}&quot;</div>
                               
                             </div>
                         )
